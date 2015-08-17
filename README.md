@@ -8,7 +8,7 @@ Note that this implementation can change rapidly during the course of the protot
 ## Serialization / Data Format
 
 The current best guess is Cap'n Proto: https://capnproto.org
-  * [https://capnproto.org/install.html](Installation)
+  * [Installation](https://capnproto.org/install.html)
 
 ## Transport layer
 
