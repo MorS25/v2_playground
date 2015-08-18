@@ -1,0 +1,96 @@
+package mavlink;
+
+struct attitude_t {
+	int32_t timestamp;
+	float w;
+	float x;
+	float y;
+	float z;
+	float rollspeed;
+	float pitchspeed;
+	float yawspeed;
+}
+
+struct quaternion_t {
+	float w;
+	float x;
+	float y;
+	float z;
+}
+
+struct vector3_t {
+	float x;
+	float y;
+	float z;
+}
+
+struct attitude_subtyped_t {
+	int32_t timestamp;
+	quaternion_t orientation;
+	vector3_t gyro_speed;
+}
+
+struct essentials_t {
+	int8_t vehicle_type;
+	int32_t time;
+	int32_t lat;
+	int32_t lon;
+	float alt;
+	int8_t mode;
+	int16_t nav_bearing;
+	float nav_dist;
+	int32_t health;
+	int16_t groundspeed;
+	int16_t airspeed;
+	int8_t gps_nsats;
+	int8_t gps_hdop;
+	int8_t gps_fixtype;
+	int16_t bat_volt;
+	int8_t bat_remaining;
+	int16_t bat_curr;
+	int16_t roll;
+	int16_t pitch;
+	int16_t navroll;
+	int16_t navpitch;
+	int16_t wind_speed;
+	int16_t wind_dir;
+	int16_t wpnum;
+	int8_t throttle;
+	int8_t temperature;
+	int16_t rangefinder;
+	int16_t vertical_speed;
+	bool armed_status;
+}
+
+struct essentials_v2_t {
+	int16_t roll;
+	int16_t pitch;
+	int16_t heading;
+	int8_t throttle;
+	int32_t lat;
+	int32_t lon;
+	float alt_rel;
+	float alt_abs;
+	float alt_terrain;
+	int8_t flight_mode;
+	int16_t groundspeed;
+	int16_t airspeed;
+	int16_t climbrate;
+	int8_t gps_nsats;
+	int8_t gps_hdop;
+	int8_t gps_fixtype;
+	int16_t bat_volt;
+	int8_t bat_remaining;
+	int16_t bat_curr;
+	int8_t temperature;
+	int32_t unhealthy;
+	int8_t failsafe;
+	bool armed_status;
+	int16_t event_message;
+	int16_t wpnum;
+	float distance_to_target;
+	int16_t target_roll;
+	int16_t target_pitch;
+	int16_t target_heading;
+}
+

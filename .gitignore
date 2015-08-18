@@ -10,3 +10,5 @@ mavlink.capnp.*
 *.swp
 # python
 *.pyc
+# vala-lcm
+mavlink.*.vala
