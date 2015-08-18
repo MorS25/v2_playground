@@ -1,0 +1,30 @@
+
+message Attitude {
+	required uint64 timestamp = 1;
+	required float w = 2;
+	required float x = 3;
+	required float y = 4;
+	required float z = 5;
+	required float rollspeed = 6;
+	required float pitchspeed = 7;
+	required float yawspeed = 8;
+}
+
+message Quaternion {
+	required float w = 1;
+	required float x = 2;
+	required float y = 3;
+	required float z = 4;
+}
+
+message Vector3 {
+	required float x = 1;
+	required float y = 2;
+	required float z = 3;
+}
+
+message AttitudeSubtyped {
+	required uint64 timestamp = 1;
+	required Quaternion orientation = 2;
+	required Vector3 gyro_speed = 3;
+}
