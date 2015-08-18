@@ -13,14 +13,14 @@ table Attitude {
   yawspeed:float ;//(required);
 }
 
-table Quaternion {
+struct Quaternion {
   w:float ;//(required);
   x:float ;//(required);
   y:float ;//(required);
   z:float ;//(required);
 }
 
-table Vector3 {
+struct Vector3 {
   x:float ;//(required);
   y:float ;//(required);
   z:float ;//(required);
@@ -32,3 +32,9 @@ table AttitudeSubtyped {
   gyro_speed:Vector3 (required);
 }
 
+// flatc -b mavlink.fbs test_msgpack_attitude.json
+// flatc -b mavlink.fbs test_msgpack_attitude_subtyped.json
+
+// not know how to use any type for flatc, uncomment one to run test:
+root_type Attitude;
+//root_type AttitudeSubtyped;
