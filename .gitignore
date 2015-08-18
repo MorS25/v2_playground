@@ -8,3 +8,5 @@ mavlink.capnp.*
 # editor temp files
 *~
 *.swp
+# python
+*.pyc
