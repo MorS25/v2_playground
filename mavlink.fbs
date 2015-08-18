@@ -1,0 +1,34 @@
+// Generated from mavlink.proto (hand-fixed)
+
+//namespace ;
+
+table Attitude {
+  timestamp:ulong ;//(required);
+  w:float ;//(required);
+  x:float ;//(required);
+  y:float ;//(required);
+  z:float ;//(required);
+  rollspeed:float ;//(required);
+  pitchspeed:float ;//(required);
+  yawspeed:float ;//(required);
+}
+
+table Quaternion {
+  w:float ;//(required);
+  x:float ;//(required);
+  y:float ;//(required);
+  z:float ;//(required);
+}
+
+table Vector3 {
+  x:float ;//(required);
+  y:float ;//(required);
+  z:float ;//(required);
+}
+
+table AttitudeSubtyped {
+  timestamp:ulong ;//(required);
+  orientation:Quaternion (required);
+  gyro_speed:Vector3 (required);
+}
+
