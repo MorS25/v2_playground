@@ -59,7 +59,7 @@ struct essentials_t {
 	int8_t temperature;
 	int16_t rangefinder;
 	int16_t vertical_speed;
-	bool armed_status;
+	boolean armed_status;
 }
 
 struct essentials_v2_t {
@@ -85,7 +85,7 @@ struct essentials_v2_t {
 	int8_t temperature;
 	int32_t unhealthy;
 	int8_t failsafe;
-	bool armed_status;
+	boolean armed_status;
 	int16_t event_message;
 	int16_t wpnum;
 	float distance_to_target;
