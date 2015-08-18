@@ -32,6 +32,71 @@ table AttitudeSubtyped {
   gyro_speed:Vector3 (required);
 }
 
+table Essentials {
+  vehicleType:ubyte;
+  time:uint;
+  lat:int;
+  lon:int;
+  alt:float;
+  mode:ubyte;
+  nav_bearing:short;
+  nav_dist:float;
+  health:uint;
+  groundspeed:ushort;
+  airspeed:ushort;
+  gps_nsats:ubyte;
+  gps_hdop:ubyte;
+  gps_fixtype:ubyte;
+  bat_volt:ushort;
+  bat_remaining:ubyte;
+  bat_curr:ushort;
+  roll:short;
+  pitch:short;
+  navroll:short;
+  navpitch:short;
+  wind_speed:short;
+  wind_dir:short;
+  wpnum:ushort;
+  throttle:ubyte;
+  temperature:byte;
+  rangefinder:ushort;
+  vertical_speed:short;
+  armed_status:bool;
+}
+
+table Essentials2 {
+  roll:ushort;
+  pitch:ushort;
+  heading:ushort;
+  throttle:ubyte;
+  lat:int;
+  lon:int;
+  alt_rel:float;
+  alt_abs:float;
+  alt_terrain:float;
+  flight_mode:ubyte;
+  groundspeed:short;
+  airspeed:short;
+  climb_rate:short;
+  gps_nsats:ubyte;
+  gps_hdop:ubyte;
+  gps_fixtype:ubyte;
+  bat_volt:short;
+  bat_remaining:ubyte;
+  bat_curr:short;
+  temperature:byte;
+  unhealthy:uint;
+  failsafe:ubyte;
+  armed_status:bool;
+  event_message:short;
+  wpnum:short;
+  distance_to_target:float;
+  target_roll:ushort;
+  target_pitch:ushort;
+  target_headiing:ushort;
+}
+
+
 // flatc -b mavlink.fbs test_msgpack_attitude.json
 // flatc -b mavlink.fbs test_msgpack_attitude_subtyped.json
 
