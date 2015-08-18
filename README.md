@@ -4,6 +4,13 @@ This is a test repository to try out new concepts for MAVLink 2.0. It is based o
 
 Note that this implementation can change rapidly during the course of the prototyping phase.
 
+## Building
+
+### Mac OS
+
+  ```
+  brew install capnp pkg-config
+  ```
 
 ## Serialization / Data Format
 
