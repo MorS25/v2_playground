@@ -14,13 +14,13 @@ int main(int argc, char *argv[])
 
   	Attitude::Builder attitude = message.initRoot<Attitude>();
   	attitude.setTimestamp(2384573485);
-  	attitude.setW(0.9f);
-  	attitude.setX(0.23f);
-  	attitude.setY(0.12f);
-  	attitude.setZ(0.09f);
-  	attitude.setRollspeed(0.00023f);
-  	attitude.setPitchspeed(-0.00023f);
-  	attitude.setYawspeed(0.00023f);
+  	attitude.getOrientation().setW(0.9f);
+  	attitude.getOrientation().setX(0.23f);
+  	attitude.getOrientation().setY(0.12f);
+  	attitude.getOrientation().setZ(0.09f);
+  	attitude.getGyroSpeed().setX(0.00023f);
+  	attitude.getGyroSpeed().setY(-0.00023f);
+  	attitude.getGyroSpeed().setZ(0.00023f);
 
   	kj::Array<capnp::word> words = capnp::messageToFlatArray(message);
   	kj::ArrayPtr<kj::byte> bytes = words.asBytes();
