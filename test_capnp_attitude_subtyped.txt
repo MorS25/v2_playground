@@ -1,4 +1,4 @@
-# capnp encode mavlink.capnp Attitude --packed < test_attitude.txt | wc
+# capnp encode mavlink.capnp AttitudeSubtyped --packed < test_capnp_attitude_subtyped.txt | wc
 (
 	timestamp = 2384573485,
 	orientation = (
