@@ -33,7 +33,7 @@ table AttitudeSubtyped {
 }
 
 table Essentials {
-  vehicleType:ubyte;
+  vehicle_type:ubyte;
   time:uint;
   lat:int;
   lon:int;
@@ -77,7 +77,7 @@ table Essentials2 {
   flight_mode:ubyte;
   groundspeed:short;
   airspeed:short;
-  climb_rate:short;
+  climbrate:short;
   gps_nsats:ubyte;
   gps_hdop:ubyte;
   gps_fixtype:ubyte;
@@ -93,13 +93,17 @@ table Essentials2 {
   distance_to_target:float;
   target_roll:ushort;
   target_pitch:ushort;
-  target_headiing:ushort;
+  target_heading:ushort;
 }
 
 
 // flatc -b mavlink.fbs test_msgpack_attitude.json
 // flatc -b mavlink.fbs test_msgpack_attitude_subtyped.json
+// flatc -b mavlink.fbs test_msgpack_essentials.json
+// flatc -b mavlink.fbs test_msgpack_essentials_v2.json
 
 // not know how to use any type for flatc, uncomment one to run test:
 root_type Attitude;
 //root_type AttitudeSubtyped;
+//root_type Essentials;
+//root_type Essentials2;

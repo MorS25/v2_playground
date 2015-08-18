@@ -92,6 +92,6 @@ struct Essentials2 {
 	distanceToTarget @25 :Float32;
 	targetRoll @26 :Int16;
 	targetPitch @27 :Int16;
-	targetHeadiing @28 :Int16;
+	targetHeading @28 :Int16;
 }
 
