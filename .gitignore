@@ -5,3 +5,4 @@ Makefile
 # Executables
 mavlink_test
 mavlink.capnp.*
+.DS_Store
