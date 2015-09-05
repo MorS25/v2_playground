@@ -79,6 +79,37 @@ int main(int argc, char *argv[])
 		cdr << uint16_t(23);		// vertical_speed. XXX unsigned?
 		cdr << bool(true);		// armed_status
 	}
+	else if (type == "essentials_v2") {
+		cdr << int16_t(521);		// roll
+		cdr << int16_t(1023);		// pitch
+		cdr << int16_t(1100);		// heading
+		cdr << uint8_t(68);		// throttle
+		cdr << int32_t(-353608059);	// lat
+		cdr << int32_t(1491637570);	// lon
+		cdr << float(98.970001);	// alt_rel
+		cdr << float(158.76);		// alt_abs
+		cdr << float(89.2);		// alt_terrain
+		cdr << uint8_t(10);		// flight_mode
+		cdr << uint16_t(1459);		// groundspeed
+		cdr << uint16_t(1678);		// airspeed
+		cdr << uint16_t(23);		// climb_rate, XXX unsigned?
+		cdr << uint8_t(20);		// gps_nsats
+		cdr << uint8_t(2);		// gps_hdop
+		cdr << uint8_t(3);		// gps_fixtype
+		cdr << uint16_t(14382);		// bat_volt
+		cdr << uint8_t(82);		// bat_remaining
+		cdr << uint16_t(2549);		// bat_curr
+		cdr << char(38);		// temperature, NOTE: int8_t cause a error.
+		cdr << uint32_t(4194304);	// unhealthy
+		cdr << uint8_t(24);		// failsafe
+		cdr << bool(true);		// armed_status
+		cdr << uint16_t(243);		// event_message
+		cdr << uint16_t(14);		// wpnum
+		cdr << float(140.0);		// distance_to_target
+		cdr << int16_t(723);		// target_roll
+		cdr << int16_t(1234);		// target_pitch
+		cdr << int16_t(1200);		// target_heading
+	}
 	else {
 		std::cerr << "Unknown type." << std::endl;
 		return 1;
