@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
 	::capnp::MallocMessageBuilder message;
 
-  	Attitude::Builder attitude = message.initRoot<Attitude>();
+  	AttitudeSubtyped::Builder attitude = message.initRoot<AttitudeSubtyped>();
   	attitude.setTimestamp(2384573485);
   	attitude.getOrientation().setW(0.9f);
   	attitude.getOrientation().setX(0.23f);
