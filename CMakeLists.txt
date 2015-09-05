@@ -1,5 +1,5 @@
 project("MAVLink 2.0" CXX)
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 2.8) # 3.1 too new for ubuntu 15.04
 set(VERSION 0.1-dev)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
@@ -14,7 +14,9 @@ if(NOT HAS_CXX11)
   message(SEND_ERROR "Requires a C++11 compiler and standard library.")
 endif()
 
+# in earlier versions of cmake (pre 3.1) this don't work
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 # Set installation paths; these can be overridden in the cache.
 set(EXEC_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}"
@@ -48,3 +50,9 @@ add_executable (mavlink_test test.cpp ${CAPNP_SRCS} ${CAPNP_HDRS})
 
 # Link the executable to Capnp
 target_link_libraries (mavlink_test ${CAPNP_LIBRARIES})
+
+### CDR test
+find_package(fastcdr REQUIRED)
+
+add_executable (test_cdr test_cdr.cpp)
+target_link_libraries (test_cdr ${fastcdr_LIBRARIES})
